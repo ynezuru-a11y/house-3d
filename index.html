@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#18201e" />
+  <title>围院新居 · 托斯卡纳院宅3D方案</title>
+  <meta name="description" content="8m宽、31m进深住宅：可切换现代意式与东方外观，前后分离双厨房，二楼设露天花园和晾晒走廊。" />
+  <meta property="og:title" content="围院新居 · 双风格3D概念方案" />
+  <meta property="og:description" content="可切换现代意式与东方外观，前后分离双厨房，二楼设露天花园与有顶晾晒走廊。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://wei-yuan-xin-ju-3d.ynezuru.chatgpt.site/og.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="围院新居 · 双风格3D概念方案" />
+  <meta name="twitter:description" content="可切换现代意式与东方外观，前后分离双厨房，二楼设露天花园与有顶晾晒走廊。" />
+  <meta name="twitter:image" content="https://wei-yuan-xin-ju-3d.ynezuru.chatgpt.site/og.png" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main class="app" id="app">
+    <canvas id="scene" aria-label="可旋转的住宅三维概念模型"></canvas>
+    <header>
+      <div class="eyebrow">CASA CON CORTE · TOSCANA</div>
+      <h1>托斯卡纳院宅</h1>
+      <p class="subtitle">陶瓦坡屋顶 · 三联拱廊 · 深绿百叶窗<br>拖动旋转，或选「正立面」看入户外观。</p>
+      <div class="height-strip" aria-label="楼层高度">
+        <span>用地 <strong>8×31m</strong></span><span>主体 <strong>8×17.5m</strong></span><span>露天花园 <strong>5×5m</strong></span><span>晾晒走廊 <strong>1.2×5m</strong></span><span>一层 <strong>3.2m</strong></span><span>二层 <strong>3.0m</strong></span><span>屋顶层 <strong>1.2m</strong></span>
+      </div>
+    </header>
+    <aside class="panel">
+      <div class="panel-head">
+        <div class="panel-title"><strong id="viewTitle">整体建筑</strong><span class="badge">可交互模型</span></div>
+        <div class="tabs" role="tablist" aria-label="楼层视图">
+          <button class="tab active" data-view="all">整体</button>
+          <button class="tab" data-view="f1">一层</button>
+          <button class="tab" data-view="f2">二层</button>
+          <button class="tab" data-view="roof">屋顶</button>
+          <button class="tab" data-view="explode">分层</button>
+        </div>
+      </div>
+      <div class="scroll">
+        <section class="section"><h2>本层功能</h2><div class="room-list" id="roomList"></div></section>
+        <section class="section"><h2>设计逻辑</h2><ul class="logic" id="logicList"></ul></section>
+        <section class="section"><h2>实景参考</h2><a class="reference" href="https://www.collichiari.com/italy/tuscany/casole/48/" target="_blank" rel="noopener noreferrer"><img src="https://images.collichiari.com/photos/48/wide-asra16%3A8/fatorianicolo.jpg" alt="Villa Di Casole实景：陶瓦坡屋顶、绿色百叶窗和拱廊" loading="lazy"><span>Villa Di Casole · 拱廊与百叶窗</span></a><p class="source-note">实景参考，非本项目效果图。图片来源：Colli Chiari。<a href="https://www.studioferi.net/portfolio-collections/my-portfolio/villa-bel-colle-maremma-tuscany" target="_blank" rel="noopener noreferrer">另参考 Studio Feri 的 Villa Bel Colle 石墙与陶瓦做法。</a></p></section>
+        <section class="section"><h2>方案边界</h2><div class="notice">前后两段分别设置坡屋顶，屋脊升高约1.2m；屋顶均止于中间花园边界。前院内新增约1.2m深入户拱廊。二楼晾晒过道沿花园设置拱廊，预留升降衣杆，晾衣时需保持通行。方位、周边遮挡尚未确认，日照效果待核对。本模型表达外观与功能分区，尚非施工图。</div></section>
+      </div>
+    </aside>
+    <div class="tools">
+      <button class="tool" id="resetBtn">总览</button><button class="tool" id="frontBtn">正立面</button><button class="tool" id="labelBtn">标签</button><button class="tool" id="styleBtn">切换东方</button><button class="tool" id="themeBtn">夜景</button><button class="tool" id="fullBtn">全屏</button>
+      <span class="hint">拖动旋转 · 滚轮缩放 · 方向键微调</span>
+    </div>
+    <div class="toast" id="toast"></div>
+  </main>
+  <script src="./tuscan.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
